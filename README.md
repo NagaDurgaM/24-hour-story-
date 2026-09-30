@@ -1,0 +1,1 @@
+24-Hour Story is an interactive web application that allows users to share temporary photos and messages. Each story remains available for 24 hours and then automatically expires. The project demonstrates frontend development concepts such as responsive UI design, JavaScript events, timers, DOM manipulation, and dynamic content management.
