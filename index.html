@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>24 Hour Stories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MAIN APP
+    ========================== -->
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Stories</h1>
+                <p>Share your moment</p>
+            </div>
+
+            <button class="add-story-btn" id="addStoryBtn">
+                +
+            </button>
+
+        </header>
+
+
+        <!-- Story List -->
+        <section class="story-section">
+
+            <div class="story-list" id="storyList">
+
+                <!-- Stories generated using JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+
+            <div class="empty-icon">
+                📸
+            </div>
+
+            <h2>No Stories Yet</h2>
+
+            <p>
+                Add your first story and it will disappear automatically
+                after 24 hours.
+            </p>
+
+            <button id="emptyAddBtn">
+                Add Story
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         STORY VIEWER
+    ========================== -->
+
+    <div class="story-viewer hidden" id="storyViewer">
+
+        <div class="viewer-background"></div>
+
+
+        <div class="story-container">
+
+            <!-- Progress Bars -->
+            <div class="progress-container" id="progressContainer">
+            </div>
+
+
+            <!-- Viewer Header -->
+            <div class="viewer-header">
+
+                <div class="profile-info">
+
+                    <img
+                        id="viewerAvatar"
+                        src=""
+                        alt="Profile"
+                    >
+
+                    <div>
+
+                        <h3 id="viewerName">
+                            User
+                        </h3>
+
+                        <span id="viewerTime">
+                            Just now
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="close-btn"
+                    id="closeViewer"
+                    aria-label="Close story"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Story Content -->
+            <div
+                class="story-content"
+                id="storyContent"
+            >
+
+                <img
+                    id="storyImage"
+                    src=""
+                    alt="Story"
+                >
+
+                <div
+                    class="story-text"
+                    id="storyText"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <button
+                class="navigation previous"
+                id="previousBtn"
+                aria-label="Previous story"
+            >
+                ‹
+            </button>
+
+            <button
+                class="navigation next"
+                id="nextBtn"
+                aria-label="Next story"
+            >
+                ›
+            </button>
+
+
+            <!-- Story Footer -->
+            <div class="viewer-footer">
+
+                <span id="storyCounter">
+                    1 / 1
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ADD STORY MODAL
+    ========================== -->
+
+    <div
+        class="modal-overlay hidden"
+        id="storyModal"
+    >
+
+        <div class="modal">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                ×
+            </button>
+
+            <h2>Create Story</h2>
+
+            <p class="modal-description">
+                Create a story that will automatically expire
+                after 24 hours.
+            </p>
+
+
+            <!-- Name -->
+            <label for="userName">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="userName"
+                placeholder="Enter your name"
+                maxlength="30"
+            >
+
+
+            <!-- Image URL -->
+            <label for="imageUrl">
+                Image URL
+            </label>
+
+            <input
+                type="url"
+                id="imageUrl"
+                placeholder="https://example.com/image.jpg"
+            >
+
+
+            <!-- Text -->
+            <label for="storyMessage">
+                Story Text
+            </label>
+
+            <textarea
+                id="storyMessage"
+                placeholder="Write something..."
+                maxlength="150"
+            ></textarea>
+
+
+            <!-- Background -->
+            <label for="backgroundColor">
+                Background
+            </label>
+
+            <input
+                type="color"
+                id="backgroundColor"
+                value="#667eea"
+            >
+
+
+            <button
+                class="publish-btn"
+                id="publishStory"
+            >
+                Publish Story
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
